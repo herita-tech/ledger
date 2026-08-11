@@ -1,4 +1,0 @@
-publisher credential probe
-written: 2026-08-11T15:54:05.542Z
-app: herita-ledger-publisher
-installation: 152830542
