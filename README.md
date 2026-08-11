@@ -6,14 +6,23 @@ Herita issues electronic promissory notes. This repository publishes the evidenc
 a holder, a counterparty, a court, an auditor — check the integrity of that record without asking
 Herita for anything, and without trusting Herita.
 
-## Status
+## Status — nothing is published yet
 
-**No checkpoints have been published yet.** Anchoring is not yet live. This repository exists so the
-publication channel is established and citable before the genesis checkpoint is published.
+Read this section before relying on anything below it.
 
-## What is published here
+| | |
+| --- | --- |
+| Checkpoints published | **None.** Anchoring is not live. |
+| Archive mirroring | **Not yet in place.** |
+| Escrow deposit | **Not yet in place.** |
 
-Each anchor cycle publishes:
+This repository exists so the publication channel is established and citable before the genesis
+checkpoint. Everything under "What will be published here" describes the intended contents, not the
+current contents. When the first checkpoint lands this section will say so.
+
+## What will be published here
+
+Each anchor cycle will publish:
 
 - **Checkpoint cores** — `{ headHash, seq, prevCoreHash, exportDigest }`. A core is immutable once
   published. It is signed by a dedicated ledger-attestation key held separately from the credential
@@ -24,15 +33,17 @@ Each anchor cycle publishes:
   kept apart from the immutable core.
 - **The public export** — event envelopes and public payloads.
 - **The attestation public key**, so verification outlives Herita.
+- **The offline verifier and instructions for running it**, so the tool and the data it checks cannot
+  become separated.
 
-Everything published here is mirrored to independent durable archives. This repository is the
-primary channel, not the only one.
+The intent is that this repository is the primary channel and not the only one, with independent
+durable archives mirroring it. Those mirrors are not yet established.
 
 ## Verifying
 
-Verification requires no Herita service, no Herita runtime, and no code from this organisation that
-you are unwilling to read. A verifier reads the published export and checks the hash chain from
-genesis; the trust root is the genesis checkpoint.
+Verification is intended to require no Herita service, no Herita runtime, and no code from this
+organisation that you are unwilling to read. A verifier reads the published export and checks the
+hash chain from genesis; the trust root is the genesis checkpoint.
 
 Two facts worth stating plainly, because they are what the design rests on:
 
