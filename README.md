@@ -6,23 +6,20 @@ Herita issues electronic promissory notes. This repository publishes the evidenc
 a holder, a counterparty, a court, an auditor — check the integrity of that record without asking
 Herita for anything, and without trusting Herita.
 
-## Status — nothing is published yet
+## Status
 
 Read this section before relying on anything below it.
 
 | | |
 | --- | --- |
-| Checkpoints published | **None.** Anchoring is not live. |
+| Checkpoints published | **Live.** The genesis checkpoint (`checkpoints/000000000002.json`, core `dd13b74ad46a…`) was published on 2026-09-17 at 21:20 UTC, covering the production chain through seq 2. `latest.json` names the current head. |
+| Anchoring | **Live.** Every checkpoint is submitted to OpenTimestamps at publication; its attestation record upgrades from `pending` to a block-bound proof as the calendar confirms it. |
 | Archive mirroring | **Not yet in place.** |
-| Escrow deposit | **Not yet in place.** |
+| Escrow deposit | **In place** for the software and this channel, on every production release. The three-party escrow agreement that names a beneficiary is not yet signed. |
 
-This repository exists so the publication channel is established and citable before the genesis
-checkpoint. Everything under "What will be published here" describes the intended contents, not the
-current contents. When the first checkpoint lands this section will say so.
+## What is published here
 
-## What will be published here
-
-Each anchor cycle will publish:
+Each anchor cycle publishes:
 
 - **Checkpoint cores** — `{ headHash, seq, prevCoreHash, exportDigest }`. A core is immutable once
   published. It is signed by a dedicated ledger-attestation key held separately from the credential
