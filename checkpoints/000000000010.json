@@ -1,0 +1,13 @@
+{
+  "core": {
+    "headHash": "9381b590d78257b357222067f950057f8c6685920ebe30cf1ecde8aff1c28473",
+    "seq": "10",
+    "prevCoreHash": "c99af467c3ae8820f157c8314540dc88cdaf7c5df755ff24caf6b942f080b3f7",
+    "exportDigest": "d7712706ae12a4187938ef327535fcfaa4d6a0499e1d75622c216b4da9137fd9"
+  },
+  "signature": {
+    "keyId": "1189873e644ebe4df5b8a2628bff33417b8b3648edbea99ab1967a651dadbf45",
+    "algorithm": "ECDSA_SHA_256",
+    "value": "MEUCIBViDwzeei95sqwLnCY67N+fX7gLhko7BnFxefJ7EC2WAiEAvuEggqkxmI73xQMvjs7404VBZJG59b6WmZrdP7wX21I="
+  }
+}
